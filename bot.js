@@ -31,15 +31,21 @@ client.on('ready', () => {
 });
 
 // code BOT features below this line
+const randomNum = Math.floor(Math.random() * 10);
+
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
 	const { commandName } = interaction;
 
+	if (commandName === 'rate') {
+		await interaction.reply(`${interaction.user}, you're a ${randomNum}`)
+	}
+
 	if (commandName === 'ping') {
 		await interaction.reply('Pong!');
 	} else if (commandName === 'server') {
-		await interaction.reply('Server info.');
+		await interaction.reply(`Server info: ${interaction.guild}`);
 	} else if (commandName === 'user') {
 		await interaction.reply('User info.');
 	}
