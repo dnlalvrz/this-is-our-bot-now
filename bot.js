@@ -3,6 +3,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 const winston = require('winston');
 const nodeCleanup = require('node-cleanup');
+const randomPost = require('./reddit');
 
 
 // Configure logger settings
@@ -41,6 +42,11 @@ client.on('interactionCreate', async interaction => {
 	if (commandName === 'rate') {
 		await interaction.reply(`${interaction.user}, you're a ${randomNum}`)
 	}
+	if (commandName === 'f1') {
+		const replyMessage = await randomPost;
+		await interaction.reply(`Fresh from the paddock:  ${replyMessage}`)
+	}
+	
 
 	if (commandName === 'ping') {
 		await interaction.reply('Pong!');

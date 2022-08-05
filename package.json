@@ -17,6 +17,7 @@
     "discord.js": "^14.1.2",
     "node-cleanup": "^2.1.2",
     "nodemon": "^2.0.15",
+    "snoowrap": "^1.23.0",
     "undici": "^5.8.0",
     "winston": "^3.3.3"
   },

@@ -7,6 +7,7 @@ const commands = [
 	new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
 	new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
     new SlashCommandBuilder().setName('rate').setDescription('Rates you, period.'),
+    new SlashCommandBuilder().setName('f1').setDescription('Random formula dank post (title for now)'),
 ]
 	.map(command => command.toJSON());
 
